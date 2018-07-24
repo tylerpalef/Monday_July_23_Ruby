@@ -1,12 +1,9 @@
-require './shopping_cart.rb'
-
 class Product
-
-def initialize(name, price, tax_rate)
-  @name = name
-  @base_price = price
-  @tax_rate = tax_rate
-end
+  def initialize(name, price, tax_rate)
+    @name = name
+    @base_price = price
+    @tax_rate = tax_rate
+  end
 
   def total_price
     @total_price = total_price
@@ -19,7 +16,6 @@ end
 
 end
 
-hairspray = Product.new(hairspray, 69, 0.17)
 # p hairspray.total_price
 # Traceback (most recent call last):
 # 	13102: from product.rb:1:in `<main>'
