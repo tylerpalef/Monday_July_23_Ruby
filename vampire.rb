@@ -1,6 +1,8 @@
 class Vampire
   @@coven = []
 
+#///////////////////////////////////////////////////////
+# Instance Methods
   def initialize(name, age, in_coffin, blood)
     @name = name
     @age = age
@@ -34,6 +36,9 @@ def go_home
   @in_coffin = true
 end
 
+#///////////////////////////////////////////////////////
+# Class Methods 
+
 def self.sunrise
   @@coven.each do |vamp|
     if vamp.drank_blood_today == false || vamp.in_coffin == false
@@ -60,7 +65,7 @@ def self.sunset
 end
 
 end
-
+#///////////////////////////////////////////////////////
 vamp1 = Vampire.create('bob', 3, false, false)
 vamp1.drink_blood
 p vamp1
